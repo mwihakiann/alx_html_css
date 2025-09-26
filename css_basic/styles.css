@@ -1,6 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: azure;
 }
 main{
     display:flex;
@@ -14,4 +15,23 @@ article{
 aside{
     flex: 1;
     overflow-y: auto;
+    color: beige;
+}
+table{
+    background-color: beige;
+    padding: 100px 100px;
+}
+th{
+    background-color: bisque;
+    color: black;
+    font-weight: bold;
+    border: 2px;
+}
+header{
+    color: ghostwhite;
+    text-decoration: none;
+}
+header:hover{
+    color: brown;
+    text-decoration: underline;
 }
