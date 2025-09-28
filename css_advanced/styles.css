@@ -1,86 +1,217 @@
-html, body{
+/* --- Global Styles --- */
+:root {
+    --color-primary: #C271FF;
+    --color-dark-bg: #071629;
+    --color-white: #FFFFFF;
+  }
+  
+  body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    color: #071629;
     margin: 0;
     padding: 0;
-    border-top: 1px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-nav ul{
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    color: white;
-    text-decoration: none;
-}
-nav{
+    text-align: center;
+  }
+  
+  /* --- Header & Hero Section --- */
+  .first-page {
+    /* You had the right idea, just needed padding */
+    background-image: url(./images/Object.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    padding: 2rem 5%; /* Adds space on the sides and top/bottom */
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15%;
-    font-size: xx-small;
-
-}
-.first-page{
-    background-image: url(./images/Object.png);
-    background-size: cover;  
-    background-position: center;
-    color: white;
-}
-.intro{
+    /* Removed margin: 15% which was too large */
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 2rem; /* Increased gap slightly */
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style the links directly for color and to remove underline */
+  nav a {
+      color: var(--color-white);
+      text-decoration: none;
+      font-weight: bold;
+  }
+  
+  .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.school{
-    font-size: 100px;
-    font-weight: bolder;
-}
-.register{
-    background-color: purple;
-    color: white;
-    padding: 12px 24px;
+    padding: 8rem 0; /* Added padding to center it vertically */
+  }
+  
+  .school {
+    font-size: 120px; /* Increased size to match design */
+    font-weight: bold;
+    margin: 0; /* Removed default margin */
+  }
+  
+  .horizontal-stack {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .register {
+    background-color: var(--color-primary); /* Using consistent color */
+    color: var(--color-white);
+    padding: 1rem 2rem;
     border-radius: 25px;
     font-weight: bold;
-}
-.learn-from-pros{
+    border: none; /* Removed default button border */
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+  
+  /* --- "Learn from the pros" Section --- */
+  .learn-from-pros {
+    padding: 5rem 0;
+  }
+  
+  .learn-from-pros h2 {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+  }
+  
+  .pros {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: medium;
-}
-.pros{
-    display: flex;
-    font-size:xx-small;
-    gap: 100px;
-}
-.bruce{
+    justify-content: space-around; /* Better for spacing than a fixed gap */
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Applied styles to ALL pro images, not just .bruce */
+  .pros img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-}
-.horizontal-stack{
-   display: flex;
-    gap: 20px;
-    font-size: smaller;
-}
-.tutorial-card {
+  }
+  
+  .pros h3 {
+      margin-bottom: 0.5rem;
+  }
+  
+  .pros p {
+      font-style: italic;
+      margin-top: 0;
+  }
+  
+  /* --- Quote Section --- */
+  .tutorials {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 10%;
+    gap: 4rem;
+  }
+  .tutorials img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .tutorials div:last-child {
+      text-align: left;
+  }
+  .tutorials blockquote {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* --- Most Popular Tutorials Section --- */
+  .popular {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 5%;
+    background-color: #F7F9FF; /* Light background color from design */
+  }
+  section > h2 {
+      width: 100%;
+      font-size: 30px;
+      margin-bottom: 3rem;
+  }
+  .tutorial-card {
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    flex-basis: 250px;
     position: relative;
-    display: inline-block;
-    margin: 20px;
   }
-
-  .tutorial-card img {
-    display: block;
-  }
-
+  .tutorial-card .smile { width: 100%; }
   .tutorial-card .play-btn {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50 -50%);
-    width: 50px;
-    height: 50px;
-    pointer-events: none;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 60px;
   }
+  .tutorial-card h3, .tutorial-card p, .tutorial-card .align, .tutorial-card .stars {
+      padding: 0 1rem;
+  }
+  .tutorial-card .align { 
+    display: flex;  
+    align-items: center; 
+    gap: .5rem; 
+}
+  .tutorial-card .phillip {
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     font-size: 5px; 
+    }
+  .tutorial-card h4 { 
+    color: var(--color-primary); 
+}
+  .tutorial-card .stars { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+  .tutorial-card .stars div { 
+    display: flex; 
+    gap: .3rem; color: 
+    var(--color-primary); 
+}
+  .tutorial-card .stars p { 
+    color: var(--color-primary); 
+    font-weight: lighter; 
+}
+  
+  /* --- Free Membership & FAQ --- */
+  .smiley {
+    background-color: var(--color-dark-bg);
+    color: var(--color-white);
+    padding: 5rem 5%;
+  }
+  .smiley-images { display: flex; justify-content: center; gap: 3rem; margin: 4rem 0;}
+  .faq { padding: 5rem 10%; }
+  .faq > div { display: flex; justify-content: space-between; text-align: left; gap: 5rem;}
+  .faq > div > div { flex: 1; }
+  
+  /* --- Footer --- */
+  footer {
+    background-color: var(--color-dark-bg);
+    color: var(--color-white);
+    padding: 3rem 5%;
+  }
+  .footeri { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+  footer .last { text-align: center; opacity: 0.5; margin-top: 2rem; }
