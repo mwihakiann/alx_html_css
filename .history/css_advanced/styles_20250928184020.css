@@ -1,8 +1,8 @@
-html, body{
+body{
+    color: white;
     margin: 0;
     padding: 0;
-    border-top: 1px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family
 }
 nav ul{
     display: flex;
@@ -17,7 +17,6 @@ nav{
     align-items: center;
     margin: 15%;
     font-size: xx-small;
-
 }
 .first-page{
     background-image: url(./images/Object.png);
@@ -31,9 +30,8 @@ nav{
     justify-content: center;
     align-items: center;
 }
-.school{
-    font-size: 100px;
-    font-weight: bolder;
+h1{
+    font-size: 40;
 }
 .register{
     background-color: purple;
